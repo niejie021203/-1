@@ -1,0 +1,85 @@
+#问题
+#3-1
+class(1)#查看变量类型
+class(1L)
+class(1+1i)
+#3-2
+a<-factor(c("12","13","23","13"))
+levels(a)#查看因子的水平???
+#3-3
+x<-"6.283185"
+as(x,"numeric")#将字符转化为数字
+#3-4
+head(x)#查看变量内容的函???
+summary(x)
+View(x)
+#3-5
+rm(x)#删除工作区的变量
+#练习
+#3-1
+class(Inf)#查询???
+class(NA)
+class(NaN)
+class("")
+typeof(Inf)#查询类型
+typeof(NA)
+typeof(NaN)
+typeof("")
+mode(Inf)#查询模式
+mode(NA)
+mode(NaN)
+mode("")
+storage.mode(Inf)#查询储存模式
+storage.mode(NA)
+storage.mode(NaN)
+storage.mode("")
+#3-2
+d<-sample(c("dog","cat","dolphin","hamster","goldfish"),100,replace=TRUE,prob =c(0.2,0.2,0.2,0.2,0.2) )#相同概率生成100个动物名???
+d[c(1:5)]#抽取前五???
+summary(d)
+sum(d=="dog")#统计各个动物的数???
+sum(d=="cat")
+sum(d=="dolphin")
+sum(d=="hamster")
+sum(d=="goldfish")
+#3-3
+f<-c(apple<-1,peach<-2,banana<-3,watermelon<-4,grape<-5)#建立一个以水果命名的变量组
+ls(pattern="a")#列出所有含有“a“的变量
+#问题
+#4-1
+seq.int(0,1.25,0.25)#建立含有0，0.25,0.5,0.75,1,1.25的向量
+#4-2
+x<-c(1,2,3)
+names(x)<-c("a","b","c")#使用name函数命名
+y<-c(a<-1,b<-2,c<-3)#在创建的时候命名
+#4-3
+x<-c(1:5)
+x[2]
+names(x)<-c("a","b","c","d","e")
+x[-2]
+x[c(TRUE,FALSE,TRUE,TRUE,TRUE)]
+#4-4
+m<-array(
+  1:72,
+  dim=c(3,4,6),
+  dimnames=list(
+  c("1","2","3"),
+  c("1","2","3","4"),
+  c("1","2","3","4","5","6")
+  )
+  )#建立3*4*6的数组
+length(m)#求取长度
+#4-5
+x<-matrix(1:16,nrow=4,ncol=4)#建立两个矩阵
+y<-matrix(1:16,nrow=4,ncol=4)
+crossprod(x,y)#求出内积
+#练习
+#4-1
+seq.int(11,50,3)-c(2,3)#建立向量并减去向量c（2,3）
+#4-2
+seq.int(1.1,4,20)*c(4,5,8,9)#建立向量并乘以已知向量
+#4-3
+a<-c(1,2,4,6)+c(8,0,-1,-4)#计算两向量四则运算后的结果
+b<-c(1,2,4,6)-c(8,0,-1,-4)
+c<-c(1,2,4,6)*c(8,0,-1,-4)
+d<-c(1,2,4,6)/c(8,0,-1,-4)
