@@ -83,3 +83,44 @@ a<-c(1,2,4,6)+c(8,0,-1,-4)#计算两向量四则运算后的结果
 b<-c(1,2,4,6)-c(8,0,-1,-4)
 c<-c(1,2,4,6)*c(8,0,-1,-4)
 d<-c(1,2,4,6)/c(8,0,-1,-4)
+#练习题
+#5-1
+n<-seq.int(1,50)
+triangle<-c(n*(n+1)/2)#建立一个包含前50个三角形数的序列
+triangle
+names(triangle)<-letters[1:15]#使用前十五个英文字母命名
+triangle[c("a","e","i","o","u")]#选择出其中以元音命名的三角数
+#5-2
+x<-seq.int(11,0)
+y<-seq.int(1,11)
+m<-c(x,y)#建立一个11到0到11的序列
+diag<-(m)#创建一个21*21的矩阵
+#问题
+#5-1
+length(list(alpha = 1, list(beta = 2, gamma = 3, delta = 4), eta = NULL) )#计算该列表的长度
+#5-2
+formals()
+#5-3
+data.frame()
+#5-4
+check.names=FALSE
+#5-5
+subset()
+#练习
+#5-1
+r<-sqrt(c(0:99))#创建一个从一到九十九的平方数列表
+z<-r==floor(r)#向下取整
+a<-c(0:99)[z]#筛选出平方数
+group<-cut(a,seq.int(min(0:99),max(0:99),10),include.lowest = TRUE,right = FALSE)
+split(a,group)#将所有数据切割成十组
+#5-2
+x<-data.frame(iris)#建立数据框将鸢尾花数据存入
+mean(iris[ ,1])
+mean(iris[ ,2])
+mean(iris[ ,3])
+mean(iris[ ,4])#求平均值
+#5-3
+beaver1 $ id<-1#添加列名为id，值为一的列
+beaver2 $ id<-2
+x<-rbind(beaver1,beaver2)#垂直拼接俩个数据框
+subset(x,activ>0)#选出活跃的子集
